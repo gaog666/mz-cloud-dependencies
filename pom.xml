@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.mz.cloud</groupId>
+	<artifactId>mz-cloud-dependencies</artifactId>
+	<version>1.0.0</version>
+	<packaging>pom</packaging>
+	<name>Mz Cloud Dependencies</name>
+	<description>Mz Cloud Dependencies</description>
+
+	<organization>
+		<name>Internet Finance, Inc.</name>
+		<url>http://www.muzhuang.com</url>
+	</organization>
+
+	<developers>
+		<developer>
+			<id>dych</id>
+			<name>ding yi chang</name>
+			<email>dingyc at mz.com</email>
+			<organization>Internet Finance, Inc.</organization>
+			<organizationUrl>http://www.muzhuang.com</organizationUrl>
+			<roles>
+				<role>Technical Director</role>
+			</roles>
+		</developer>
+	</developers>
+
+	<properties>
+		<!-- Dependency versions -->
+		<mz-cloud-common.version>1.1.69</mz-cloud-common.version>
+		<mz-cloud-validate.version>1.0.59</mz-cloud-validate.version>
+		<mz-cloud-deposit.version>1.0.17</mz-cloud-deposit.version>
+		<mz-cloud-thirdparty.version>1.0.73</mz-cloud-thirdparty.version>
+		<mz-cloud-upload.version>1.0.13</mz-cloud-upload.version>
+		<mz-rms-mq.version>0.0.1</mz-rms-mq.version>
+		<mz-cloud-rocketmq.version>1.0.5</mz-cloud-rocketmq.version>
+		<mz-cloud-amq.version>2.0.19</mz-cloud-amq.version>
+		<mz-common.version>9.9.76</mz-common.version>
+		<mybatis.version>1.2.0</mybatis.version>
+		<mysql.version>5.1.29</mysql.version>
+		<atomikos.version>4.0.4</atomikos.version>
+		<druid.version>1.1.5</druid.version>
+		<jta.version>1.1</jta.version>
+		<quartz.version>2.3.0</quartz.version>
+		<!-- plugin versions-->
+		<maven-source-plugin.version>3.0.1</maven-source-plugin.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<!-- 微服务框架公共包 -->
+			<dependency>
+				<groupId>com.mz.cloud</groupId>
+				<artifactId>mz-cloud-common</artifactId>
+				<version>${mz-cloud-common.version}</version>
+			</dependency>
+			<!-- 微服务框架公共包、验证签名包 -->
+			<dependency>
+				<groupId>com.mz.cloud</groupId>
+				<artifactId>mz-cloud-validate</artifactId>
+				<version>${mz-cloud-validate.version}</version>
+			</dependency>
+			<!-- 微服务框架恒丰银行依赖包 -->
+			<dependency>
+				<groupId>com.mz.cloud</groupId>
+				<artifactId>mz-cloud-deposit</artifactId>
+				<version>${mz-cloud-deposit.version}</version>
+			</dependency>
+			<!-- 微服务框架第三方(快捷通支付)依赖包 -->
+			<dependency>
+				<groupId>com.mz.cloud</groupId>
+				<artifactId>mz-cloud-thirdparty</artifactId>
+				<version>${mz-cloud-thirdparty.version}</version>
+			</dependency>
+			<!-- 微服务框架文件上传依赖包 -->
+			<dependency>
+				<groupId>com.mz.cloud</groupId>
+				<artifactId>mz-cloud-upload</artifactId>
+				<version>${mz-cloud-upload.version}</version>
+			</dependency>
+			<!-- 微服务rabbitMQ依赖包 -->
+			<dependency>
+				<groupId>com.mz.cloud</groupId>
+				<artifactId>mz-rms-mq</artifactId>
+				<version>${mz-rms-mq.version}</version>
+			</dependency>
+			<!-- 微服务rocketMQ依赖包 -->
+			<dependency>
+				<groupId>com.mz.cloud</groupId>
+				<artifactId>mz-cloud-rocketmq</artifactId>
+				<version>${mz-cloud-rocketmq.version}</version>
+			</dependency>
+			<!-- 微服务activeMQ依赖包 -->
+			<dependency>
+				<groupId>com.mz.cloud</groupId>
+				<artifactId>mz-cloud-amq</artifactId>
+				<version>${mz-cloud-amq.version}</version>
+			</dependency>
+			<!--管理后台公共工具包-->
+			<dependency>
+				<groupId>com.mz</groupId>
+				<artifactId>mz-common</artifactId>
+				<version>${mz-common.version}</version>
+			</dependency>
+			<!-- mybatis核心依赖包 -->
+			<dependency>
+				<groupId>org.mybatis.spring.boot</groupId>
+				<artifactId>mybatis-spring-boot-starter</artifactId>
+				<version>${mybatis.version}</version>
+			</dependency>
+			<!--mysql数据库连接驱动 -->
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>${mysql.version}</version>
+			</dependency>
+			<!-- druid数据库连接池 -->
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>druid</artifactId>
+				<version>${druid.version}</version>
+			</dependency>
+			<!--Atomikos多数据源包-->
+			<dependency>
+				<groupId>com.atomikos</groupId>
+				<artifactId>transactions-jdbc</artifactId>
+				<version>${atomikos.version}</version>
+			</dependency>
+			<!--jta支持包-->
+			<dependency>
+				<groupId>javax.transaction</groupId>
+				<artifactId>jta</artifactId>
+				<version>${jta.version}</version>
+			</dependency>
+			<!-- quartz定时任务调度 -->
+			<dependency>
+				<groupId>org.quartz-scheduler</groupId>
+				<artifactId>quartz</artifactId>
+				<version>${quartz.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.quartz-scheduler</groupId>
+				<artifactId>quartz-jobs</artifactId>
+				<version>${quartz.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<plugins>
+			<!--生成源码包插件 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>${maven-source-plugin.version}</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>jar-no-fork</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+	<!--上传仓库路径 -->
+	<distributionManagement>
+		<repository>
+			<id>nexus</id>
+			<name>releases</name>
+			<url>http://nexus.imuzhuang.com:8081/repository/maven-releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>nexus</id>
+			<name>snapshots</name>
+			<url>http://nexus.imuzhuang.com:8081/repository/maven-snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+</project>
